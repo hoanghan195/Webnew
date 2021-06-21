@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		.nav-mobile {
+			display: flex;
+			background-color: rgb(121, 120, 120);
+			height: 100px;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.nav-tablet {
+			display: flex;
+			background-color: rgb(102, 49, 49);
+			height: 100px;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.nav-pc {
+			display: flex;
+			background-color: rgb(46, 136, 58);
+			height: 100px;
+			justify-content: center;
+			align-items: center;
+			border-style: none;
+		}
+		.left{display: flex;
+		}
+		.right{display: flex;
+		}
+
+		.nav-list {
+			display: flex;
+		}
+		.nav-mobile .nav-link {
+			text-transform: uppercase;
+			text-decoration: none;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color: rgb(250, 250, 248);
+			padding: 30px;
+			font-size: 14px;
+		}
+		.nav-tablet .nav-link {
+			text-transform: uppercase;
+			text-decoration: none;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color: rgb(250, 250, 248);
+			padding: 30px;
+			font-size: 16px;
+		}
+		.nav-pc .nav-link {
+			text-transform: uppercase;
+			text-decoration: none;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color: rgb(250, 250, 248);
+			padding: 30px;
+			font-size: 18px;
+		}
+
+		li {
+			list-style: none;
+			align-items: center;
+		}
+
+		/*mobile*/
+		@media (max-width:768px) {
+			.nav-tablet {
+				display: none;
+				max-width: 768px;
+			}
+
+			.nav-pc {
+				display: none;
+			}
+		}
+
+		/*tablet*/
+		@media (min-width:769px) and (max-width:991px) {
+			.nav-mobile {
+				display: none;
+			}
+
+			.nav-pc {
+				display: none;
+			}
+		}
+
+		/*pc*/
+		@media(min-width:992px) {
+			.nav-mobile {
+				display: none;
+			}
+
+			.nav-tablet {
+				display: none;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<title>Project 3</title>
+	<div class="main">
+		<div class="nav">
+			<!--Header-767px-->
+			<nav class="nav-mobile">
+				<ul class="nav-list" style="padding-left: 0px;">
+					<li><a href="HTML/Brand.html" class="nav-link">Brand</a></li>
+					<li><a href="HTML/Browse.html" class="nav-link">Browse</a></li>
+					<li><a href="#" class="nav-link">Sign Up</a></li>
+					<li><a href="#" class="nav-link">Log In</a></li>
+					<li><a href="#" class="nav-link">Help</a></li>
+				</ul>
+			</nav>
+			<!--Header-768-992px-->
+			<nav class="nav-tablet">
+				<ul class="nav-list" style="padding-left: 0px;">
+					<ul class="left" style="margin-right: 200px">
+						<li><a href="HTML/Brand.html" class="nav-link">Brand</a></li>
+						<li><a href="HTML/Browse.html" class="nav-link">Browse</a></li>
+					</ul>
+					<ul class="right">
+						<li><a href="#" class="nav-link">Sign Up</a></li>
+						<li><a href="#" class="nav-link">Log In</a></li>
+						<li><a href="#" class="nav-link">Help</a></li>
+					</ul>
+				</ul>
+			</nav>
+			<!--Header-992px-->
+			<nav class="nav-pc">
+				<ul class="nav-list" style="padding-left: 0px;">
+					<ul class="left" style="margin-right: 300px">
+						<li><a href="HTML/Brand.html" class="nav-link">Brand</a></li>
+						<li><a href="HTML/Browse.html" class="nav-link">Browse</a></li>
+					</ul>
+					<ul class="right">
+						<li><a href="#" class="nav-link">Sign Up</a></li>
+						<li><a href="#" class="nav-link">Log In</a></li>
+						<li><a href="#" class="nav-link">Help</a></li>
+					</ul>
+				</ul>
+			</nav>
+		</div>
+		<!--banner
+		<div class="banner">
+		<img src="https://s3.amazonaws.com/codecademy-content/courses/ltp/img/lodging.png" alt="" class="image-banner">
+			<h1 class="banner-h1"> Find a place to stay.</h1>
+			<p class="banner-p">Rent from people in over 34,000 citis and 192 countries.</p>
+		</div>
+		<div class="content">
+			<h2 style="margin-bottom:0px; ">Neighborhood Guides</h2>
+			<p style="margin-top:5px; font-size: 14px;">Not sure where to stay? We've created neighborhood guides for
+				cities
+				all around the World.</P>
+		</div>
+
+		<div class="footer1">
+			<div class="ft1-1">
+
+				<img src='https://s3.amazonaws.com/codecademy-content/courses/ltp/img/mexico-city.png' />
+				<img src='https://s3.amazonaws.com/codecademy-content/courses/ltp/img/ny.png' />
+			</div>
+			<div class="ft1-2">
+				<img src='https://s3.amazonaws.com/codecademy-content/courses/ltp/img/tokyo.png' />
+				<img src='https://s3.amazonaws.com/codecademy-content/courses/ltp/img/paris.png' />
+			</div>
+			<div class="ft1-3">
+				<img src='https://s3.amazonaws.com/codecademy-content/courses/ltp/img/invite.png'
+				 />
+
+			</div>
+		</div>
+		<div class="footer2">
+
+			<div class="ft2">
+				<h3>Travel</h3>
+				<p>From apartments and rooms to treehouses and boats: stay in unique space in 192
+					countries.</p>
+				<a href="#">See how to travel on Airbnb</a>
+			</div>
+			<div class="ft2">
+				<h3>Host</h3>
+				<p>Renting out your unused space could pay your bills or fund your next vacation.
+				</p>
+				<a href="#">Learn more about hosting</a>
+			</div>
+			<div class="ft2">
+				<h3>Trust and Safety</h3>
+				<p>From vertifield ID to our worldwide customer support team. We're got you back.
+				</p>
+				<a href="#">Learn about trust at Airbnb</a>
+			</div>
+		</div>
+	</div><!--container-->
+
+</body>
+
+</html>
